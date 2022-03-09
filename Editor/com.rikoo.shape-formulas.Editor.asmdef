@@ -1,0 +1,16 @@
+{
+    "name": "com.rikoo.shape-formulas.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:dffbd3dbf4036c84d87152ecc3a4b71a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
