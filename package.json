@@ -1,0 +1,9 @@
+{
+  "name": "com.rikoo.shape-formulas",
+  "displayName": "Shape Formulas",
+  "version": "0.0.1",
+  "description": "The package contain the necessary elements to place elements on shapes",
+  "keywords": [
+    "utility", "shapes", "level design"
+  ]
+}
