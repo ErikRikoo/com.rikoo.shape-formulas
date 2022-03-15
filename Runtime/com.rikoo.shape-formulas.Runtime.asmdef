@@ -1,3 +1,16 @@
 {
-	"name": "com.rikoo.shape-formulas.Runtime"
+    "name": "com.rikoo.shape-formulas.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:24d1b07104f2e78439f6a8f07f833dc3"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
