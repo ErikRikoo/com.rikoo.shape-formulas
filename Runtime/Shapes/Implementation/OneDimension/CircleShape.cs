@@ -12,13 +12,7 @@ namespace ShapeFormulas.Implementation.OneDimension
         
         public override Vector3 GetPoint(float _normalizedCoordinates)
         {
-            return Utilities.Formulas.Circle.GetPoint(_normalizedCoordinates, m_Radius);
-        }
-
-        public override void GetPoint(float _normalizedCoordinates, out Vector3 _position, out Vector3 _forward)
-        {
-            _position = GetPoint(_normalizedCoordinates);
-            _forward = Quaternion.Euler(0, -90, 0) * _position;
+            return Formulas.Circle.GetPoint(_normalizedCoordinates, m_Radius);
         }
 
         public override Range<float> CoordinateRange => new Range<float>
