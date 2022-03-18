@@ -53,11 +53,6 @@ namespace ShapeFormulas.Implementation.OneDimension
             return Vector3.LerpUnclamped(startPoint, endPoint, interp) * m_Radius;
         }
 
-        public override void GetPoint(float _normalizedCoordinates, out Vector3 _position, out Vector3 _forward)
-        {
-            throw new NotImplementedException();
-        }
-
         public override Range<float> CoordinateRange => new Range<float>
         {
             Min = 0,
