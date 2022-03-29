@@ -5,28 +5,29 @@ using Utilities;
 namespace ShapeFormulas.Implementation.OneDimension
 {
     [Serializable]
-    public class CircleShape : AShape1D
+    public class LineShape : AShape1D
     {
-        [Min(0)]
-        [SerializeField] private float m_Radius = 1;
+        [SerializeField] private Vector3 m_Direction = Vector3.forward;
+        [SerializeField] private float m_Length = 1;
+        
         
         public override Vector3 GetPoint(float _normalizedCoordinates)
         {
-            return Formulas.Circle.GetPoint(_normalizedCoordinates, m_Radius);
+            return Vector3.LerpUnclamped(Vector3.zero, m_Direction * m_Length, _normalizedCoordinates);
         }
 
         public override void GetPoint(float _normalizedCoordinates, out Vector3 _position, out Vector3 _forward)
         {
             _position = GetPoint(_normalizedCoordinates);
-            _forward = new Vector3(-_position.z, 0, _position.x);
+            _forward = m_Direction;
         }
 
         public override Range<float> CoordinateRange => new Range<float>
         {
             Min = 0,
-            Max = 360f,
+            Max = m_Length
         };
 
-        public override float Size => 2 * Mathf.PI * m_Radius;
+        public override float Size => m_Length;
     }
 }
