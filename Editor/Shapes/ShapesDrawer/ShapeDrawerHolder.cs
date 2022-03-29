@@ -7,7 +7,7 @@ namespace ShapeFormulas.ShapesDrawer
 {
     public class ShapeDrawerHolder
     {
-        private DisplayableDrawerFactory<AShapeDrawer> m_Drawer = new DisplayableDrawerFactory<AShapeDrawer>();
+        private ObjectDrawerFactory<AShapeDrawer> m_Drawer = new ObjectDrawerFactory<AShapeDrawer>();
         private SerializedProperty m_ShapeProperty;
         private SerializedObject m_SerializedObject;
         private IShape1DHolder m_ShapeHolder;

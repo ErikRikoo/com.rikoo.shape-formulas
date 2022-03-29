@@ -34,5 +34,23 @@ namespace ShapeFormulas.Implementation.OneDimension
         public override float Size => Vector3.Distance(m_Start, m_End);
 
         public Vector3 Forward => (m_End - m_Start).normalized;
+
+#if UNITY_EDITOR
+        [HideInInspector]
+        [SerializeField] private AdvancedSettings m_AdvancedSettings;
+        
+        [Serializable]
+        public class AdvancedSettings
+        {
+            [SerializeField] private bool m_StartSelected;
+            [SerializeField] private bool m_EndSelected;
+            [SerializeField] private int m_CurrentlyUsedTool = -1;
+            [SerializeField] private float m_FloatBuffer;
+            [SerializeField] private int m_IntBuffer1 = 0;
+            [SerializeField] private int m_IntBuffer2 = 0;
+        }
+#endif        
     }
+
+
 }
